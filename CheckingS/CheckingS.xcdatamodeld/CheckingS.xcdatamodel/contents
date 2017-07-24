@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Check" representedClassName=".Check" parentEntity="Debit" syncable="YES" codeGenerationType="class"/>
+    <entity name="Debit" representedClassName=".Debit" parentEntity="Transaction" syncable="YES" codeGenerationType="class"/>
+    <entity name="Deposit" representedClassName=".Deposit" parentEntity="Transaction" syncable="YES" codeGenerationType="class"/>
+    <entity name="Source" representedClassName=".Source" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" defaultValueString="aaa" syncable="YES"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Deny" destinationEntity="Transaction" inverseName="source" inverseEntity="Transaction" syncable="YES"/>
+    </entity>
+    <entity name="Transaction" representedClassName=".Transaction" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="amount" attributeType="Decimal" minValueString="-20000" maxValueString="20000" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cleared" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dateCreated" attributeType="Date" defaultDateTimeInterval="520129560" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="memo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="transNumber" optional="YES" attributeType="Integer 32" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="source" maxCount="1" deletionRule="Nullify" destinationEntity="Source" inverseName="transactions" inverseEntity="Source" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Check" positionX="142" positionY="-18" width="128" height="43"/>
+        <element name="Debit" positionX="7" positionY="-144" width="128" height="43"/>
+        <element name="Deposit" positionX="-144" positionY="-88" width="128" height="43"/>
+        <element name="Source" positionX="43" positionY="-288" width="128" height="73"/>
+        <element name="Transaction" positionX="-207" positionY="-325" width="128" height="133"/>
+    </elements>
+</model>
