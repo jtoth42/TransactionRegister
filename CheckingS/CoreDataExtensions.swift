@@ -30,6 +30,10 @@ extension Check {
         let nextCheckNumber = 1 + lastCheckNumber.intValue
         transNumber = NSNumber(value: nextCheckNumber)
       }
+        else
+      {
+        transNumber = NSNumber(value: 0)
+        }
     } catch {
       NSLog(error as! String)
     }
