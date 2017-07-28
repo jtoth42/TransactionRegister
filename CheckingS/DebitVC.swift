@@ -3,7 +3,6 @@
 //  CheckingS
 //
 //  Created by Jim on 7/9/17.
-//  Copyright © 2017 Jim. All rights reserved.
 //
 
 import Cocoa

@@ -3,7 +3,6 @@
 //  CheckingS
 //
 //  Created by Jim on 6/23/17.
-//  Copyright © 2017 Jim. All rights reserved.
 //
 
 // This is actually the VC for the SourceListController Scene
