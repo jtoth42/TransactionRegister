@@ -14,6 +14,7 @@ extension Transaction {
   }
 }
 
+
 extension Check {
   override public func awakeFromInsert() {
     super.awakeFromInsert()
